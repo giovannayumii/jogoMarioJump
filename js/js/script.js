@@ -16,21 +16,21 @@ const loop = setInterval(() =>{
 
     console.log(marioPosition);
 
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 120){
 
         pipe.style.animation = 'none';
-        pipe.syle.left = `${pipePosition}px`;
-        
+        pipe.style.left = `${pipePosition}px`;
+
         mario.style.animation = 'none';
-        mario.syle.bottom = `${marioPosition}px`;
+        mario.style.bottom = `${marioPosition}px`;
 
-        mario.src = '../imagens/game-over.png';
-        mario.style.width ='75px'
-        mario.style.marginLeft = '50px'
+        mario.src = "../imagens/game-over.png";
+        mario.style.width ='75px';
+        mario.style.marginLeft = '50px';
+
+        clearInterval(loop);
     }
-},10);
-
-
+},1);
 
 /* Pular quando for pressionado qualquer tecla*/
 document.addEventListener('keydown',jump);/* Executa a função, nessse caso a função JUMP*/
